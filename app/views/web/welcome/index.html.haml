@@ -1,0 +1,113 @@
+/ Navigation
+%nav.navbar.navbar-custom.navbar-fixed-top{role: "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-main-collapse", "data-toggle" => "collapse", type: "button"}
+        %i.fa.fa-bars
+      %a.navbar-brand.page-scroll{href: "#page-top"}
+        %i.fa.fa-play-circle
+        %span.light Start
+        Bootstrap
+    / Collect the nav links, forms, and other content for toggling
+    .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+      %ul.nav.navbar-nav
+        / Hidden li included to remove active class from about link when scrolled up past about section
+        %li.hidden
+          %a{href: "#page-top"}
+        %li
+          %a.page-scroll{href: "#about"} About
+        %li
+          %a.page-scroll{href: "#contact"} Contact Start Bootstrap
+        %li
+          %a.page-scroll{href: "#download2"} Download SASS
+        %li
+          %a.page-scroll{href: "#contact2"} Contact Blackfyre
+    / /.navbar-collapse
+  / /.container
+/ Intro Header
+%header.intro
+  .intro-body
+    .container
+      .row
+        .col-md-8.col-md-offset-2
+          %h1.brand-heading Grayscale
+          %p.intro-text
+            A free, responsive, one page Bootstrap theme.
+            %br>/
+            Created originally by Start Bootstrap.
+          %a.btn.btn-circle.page-scroll.pulse{href: "#about"}
+            %i.fa.fa-angle-double-down
+/ About Section
+%section#about.container.content-section.text-center
+  .row
+    .col-lg-8.col-lg-offset-2
+      %h2 About Grayscale
+      %p
+        Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on
+        = succeed "." do
+          %a{href: "http://startbootstrap.com/template-overviews/grayscale/"} the preview page
+      %p
+        This theme features stock photos by
+        %a{href: "http://gratisography.com/"} Gratisography
+        along with a custom Google Maps skin courtesy of
+        = succeed "." do
+          %a{href: "http://snazzymaps.com/"} Snazzy Maps
+      %p This version of Grayscale includes full HTML, CSS, and custom JavaScript files along with SASS files and bower for an even easier customization.
+/ Contact Section
+%section#contact.container.content-section.text-center
+  .row
+    .col-lg-8.col-lg-offset-2
+      %h2 Contact Start Bootstrap
+      %p Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!
+      %p
+        %a{href: "mailto:feedback@startbootstrap.com"} feedback@startbootstrap.com
+      %ul.list-inline.banner-social-buttons
+        %li
+          %a.btn.btn-default.btn-lg{href: "https://twitter.com/SBootstrap"}
+            %i.fa.fa-twitter.fa-fw
+            %span.network-name Twitter
+        %li
+          %a.btn.btn-default.btn-lg{href: "https://github.com/IronSummitMedia/startbootstrap"}
+            %i.fa.fa-github.fa-fw
+            %span.network-name Github
+        %li
+          %a.btn.btn-default.btn-lg{href: "https://plus.google.com/+Startbootstrap/posts"}
+            %i.fa.fa-google-plus.fa-fw
+            %span.network-name Google+
+/ Download SASS Section
+%section#download2.content-section.text-center
+  .download-section
+    .container
+      .col-lg-8.col-lg-offset-2
+        %h2 Download Grayscale
+        %p You can download the SASS version of Grayscale for free on the GITHUB page.
+        %a.btn.btn-default.btn-lg{href: "https://github.com/blackfyre/grayscale-sass/"} Visit the Download Page
+/ Contact Section
+%section#contact2.container.content-section.text-center
+  .row
+    .col-lg-8.col-lg-offset-2
+      %h2 Contact Blackfyre
+      %p
+        If you have problems with the
+        %b SASS version
+        of the original template, please report it at the
+      %p
+        %a{href: "https://github.com/blackfyre/grayscale-sass/issues"} GITHUB Issues page
+      %ul.list-inline.banner-social-buttons
+        %li
+          %a.btn.btn-default.btn-lg{href: "https://twitter.com/gnick666"}
+            %i.fa.fa-twitter.fa-fw
+            %span.network-name Twitter
+        %li
+          %a.btn.btn-default.btn-lg{href: "https://github.com/blackfyre"}
+            %i.fa.fa-github.fa-fw
+            %span.network-name Github
+/ Map Section
+#map
+/ Footer
+%footer
+  .container.text-center
+    %p Copyright © Your Website 2014
+/ Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/
+%script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false", type: "text/javascript"}
+= javascript_include_tag 'grayscale/main.min'
