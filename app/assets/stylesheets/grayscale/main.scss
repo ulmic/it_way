@@ -1,0 +1,10 @@
+/* Vendor imports */
+$icon-font-path: '/fonts/';
+$fa-font-path: '../fonts';
+@import "bootstrap";
+@import 'font-awesome';
+@import 'hover';
+
+/* App imports */
+@import "grayscale/app/_variables";
+@import "grayscale/app/_greyscale";

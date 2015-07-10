@@ -1,0 +1,77 @@
+%header.intro
+  .intro-body
+    .container
+      .row
+        .col-md-8.col-md-offset-2
+          %h1.brand-heading It Way
+          %p.intro-text
+            Форум перспектив молодого специалиста в ИТ
+            %br>/
+            г. Ульяновск
+          %a.btn.btn-circle.page-scroll.pulse{ href: '#about' }
+            %i.fa.fa-angle-double-down
+%section#about.container.content-section.text-center
+  .row
+    .col-lg-8.col-lg-offset-2
+      %h2 О форуме
+      %p
+        Форум «It Way» поможет участникам узнать много нового о сфере информационных технологий в Ульяновской области, начиная от ИТ-специальностей в ВУЗах, и, заканчивая ИТ-компаниями и конкретными проектами.
+      %p
+        На форум приглашаются будущие программисты и дизайнеры: старшеклассники, желающие поступить на ИТ-специальности, а также студенты младших курсов, которые хотят получить теоретические знания в программировании, дизайне и схемотехнике.
+%section#contact.container.content-section.text-center
+  .row
+    .col-lg-8.col-lg-offset-2
+      %h2 Contact Start Bootstrap
+      %p Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!
+      %p
+        %a{ href: 'mailto:feedback@startbootstrap.com' } feedback@startbootstrap.com
+      %ul.list-inline.banner-social-buttons
+        %li
+          %a.btn.btn-default.btn-lg{ href: 'https://twitter.com/SBootstrap' }
+            %i.fa.fa-twitter.fa-fw
+            %span.network-name Twitter
+        %li
+          %a.btn.btn-default.btn-lg{ href: 'https://github.com/IronSummitMedia/startbootstrap' }
+            %i.fa.fa-github.fa-fw
+            %span.network-name Github
+        %li
+          %a.btn.btn-default.btn-lg{ href: 'https://plus.google.com/+Startbootstrap/posts' }
+            %i.fa.fa-google-plus.fa-fw
+            %span.network-name Google+
+/ Download SASS Section
+%section#download2.content-section.text-center
+  .download-section
+    .container
+      .col-lg-8.col-lg-offset-2
+        %h2 Download Grayscale
+        %p You can download the SASS version of Grayscale for free on the GITHUB page.
+        %a.btn.btn-default.btn-lg{ href: 'https://github.com/blackfyre/grayscale-sass/' } Visit the Download Page
+/ Contact Section
+%section#contact2.container.content-section.text-center
+  .row
+    .col-lg-8.col-lg-offset-2
+      %h2 Contact Blackfyre
+      %p
+        If you have problems with the
+        %b SASS version
+        of the original template, please report it at the
+      %p
+        %a{ href: 'https://github.com/blackfyre/grayscale-sass/issues' } GITHUB Issues page
+      %ul.list-inline.banner-social-buttons
+        %li
+          %a.btn.btn-default.btn-lg{ href: 'https://twitter.com/gnick666' }
+            %i.fa.fa-twitter.fa-fw
+            %span.network-name Twitter
+        %li
+          %a.btn.btn-default.btn-lg{ href: 'https://github.com/blackfyre' }
+            %i.fa.fa-github.fa-fw
+            %span.network-name Github
+/ Map Section
+#map
+/ Footer
+%footer
+  .container.text-center
+    %p Copyright © Your Website 2014
+/ Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/
+%script{ src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false', type: 'text/javascript' }
+= javascript_include_tag 'grayscale/main.min'
