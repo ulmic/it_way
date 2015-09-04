@@ -1,0 +1,9 @@
+- unless @banner.nil?
+  %aside.cta-quote{ style: "background-image: url(#{@banner.image})" }
+    .container.wow.fadeIn
+      .row
+        .col-md-10.col-md-offset-1
+          %span.quote
+            = @banner.text
+          %hr.colored
+          = link_to @banner.text_on_link, @banner.url, class: 'btn btn-outline-light'

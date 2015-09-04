@@ -1,23 +1,36 @@
-%nav.navbar.navbar-custom.navbar-fixed-top{ role: 'navigation' }
+%nav.navbar.navbar-inverse
   .container
     .navbar-header
-      %button.navbar-toggle{ 'data-target' => '.navbar-main-collapse', 'data-toggle' => 'collapse', type: 'button' }
-        %i.fa.fa-bars
-      %a.navbar-brand.page-scroll{ href: '#page-top' }
-        %i.fa.fa-play-circle
-        %span.light Start
-        Bootstrap
-    / Collect the nav links, forms, and other content for toggling
-    .collapse.navbar-collapse.navbar-right.navbar-main-collapse
-      %ul.nav.navbar-nav
-        / Hidden li included to remove active class from about link when scrolled up past about section
+      %button.navbar-toggle
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{ href: root_path, style: 'display: inline' }
+        = image_tag 'logo.png', class: 'img-responsive', alt: ''
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
         %li.hidden
           %a{ href: '#page-top' }
+        %li.dropdown
+          %a.dropdown-toggle{  data: {  hover: :dropdown, toggle: :dropdown  }, href: '#'  }
+            Кнопка 1
+          %ul.dropdown-menu{  role: :menu  }
+            %li
+              %a{  href: '#'  }
+                Первая позиция меню
+            %li
+              %a{  href: '#'  }
+                Вторая позиция меню
         %li
-          %a.page-scroll{ href: '#about' } About
+          %a{ href: '#' }
+            Кнопка 2
         %li
-          %a.page-scroll{ href: '#contact' } Contact Start Bootstrap
+          %a{ href: '#' }
+            Кнопка 3
         %li
-          %a.page-scroll{ href: '#download2' } Download SASS
+          %a{ href: '#' }
+            Кнопка 4
         %li
-          %a.page-scroll{ href: '#contact2' } Contact Blackfyre
+          %a{ href: '#' }
+            Кнопка 5

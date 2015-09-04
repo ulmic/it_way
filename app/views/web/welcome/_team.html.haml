@@ -1,0 +1,26 @@
+%section.bg-gray
+  .container.text-center.wow.fadeIn
+    .row
+      .col-lg-12
+        %h2
+          = block.title
+        %p
+          = block.text
+        %hr.colored
+    .row.content-row
+      .col-lg-12
+        .about-carousel
+          - @members.each do |member|
+            .item
+              = image_tag member.avatar.big, class: 'img-responsive'
+              .caption
+                %h3
+                  = member.user.name
+                %hr.colored
+                %p
+                  = member.position
+          .item.join-us-item
+            %i.fa.fa-question
+            .caption
+              %h4
+                = t('.you_can_join_us')

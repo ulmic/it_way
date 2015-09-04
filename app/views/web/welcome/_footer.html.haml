@@ -1,0 +1,42 @@
+%footer.footer
+  .container.text-center
+    .row
+      .col-md-4.contact-details
+        %h4
+          %i.fa.fa-phone
+          = t('.phone')
+        - configus.phones.each do |phone|
+          %p
+            = phone
+      .col-md-4.contact-details
+        %h4
+          %i.fa.fa-envelope
+          Email
+        %p
+          %a{ href: "mailto:#{configus.email}" }
+            = configus.email
+    .row.social
+      .col-md-4
+      .col-md-1
+        %a.instagram{ href: configus.social_links.instagram }
+          = image_tag 'social_networks/gray/instagram.png', class: :gray
+          = image_tag 'social_networks/white/instagram.png', class: :white
+      .col-md-1
+        %a.vimeo{ href: configus.social_links.vimeo }
+          = image_tag 'social_networks/gray/vimeo.png', class: :gray
+          = image_tag 'social_networks/white/vimeo.png', class: :white
+      .col-md-1
+        %a.facebook{ href: configus.social_links.facebook }
+          = image_tag 'social_networks/gray/facebook.png', class: :gray
+          = image_tag 'social_networks/white/facebook.png', class: :white
+      .col-md-1
+        %a.vk{ href: configus.social_links.vk.all }
+          = image_tag 'social_networks/gray/vk.png', class: :gray
+          = image_tag 'social_networks/white/vk.png', class: :white
+    .row.copyright
+      .col-lg-12
+        %p.small
+          &copy
+          = copyright_notice_year_range 2015
+          &nbsp
+          = t('company.name')
