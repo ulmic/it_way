@@ -9,11 +9,6 @@ $(function() {
     });
 });
 
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});
-
 // Owl Carousel Settings
 $(".about-carousel").owlCarousel({
     items: 3,
@@ -79,19 +74,6 @@ $('.gallery-link').magnificPopup({
         titleSrc: 'title'
     }
 });
-
-// Formstone Wallpaper - Video Background Settings
-$("header.video").wallpaper({
-    source: {
-        poster: "/bg-mobile-fallback.jpg",
-        mp4: "/camera.mp4"
-    }
-});
-
-// Scrollspy: Highlights the navigation menu items while scrolling.
-$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})
 
 // Portfolio Filtering Scripts & Hover Effect
 $(function() {

@@ -6,24 +6,30 @@
           IT Way - форум перспектив будущего ИТ-специалиста
         %hr.colored/
     .row.text-center.content-row
-      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '.2s' }
+      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '.5s' }
         .about-content
-          = image_tag 'code.png'
+          %i.fa.fa-code.fa-4x
           %h3
             Программирование
           %p
             Занимаешься программирование, молодец! Тебе сюда!
-      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '.2s' }
+          %p
+            = link_to t('.send_request'), '#', class: 'btn btn-branded'
+      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '1s' }
         .about-content
-          = image_tag 'design.png'
+          %i.fa.fa-paint-brush.fa-4x
           %h3
             Дизайн
           %p
             Занимаешься программирование, молодец! Тебе сюда!
-      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '.2s' }
+          %p
+            = link_to t('.send_request'), '#', class: 'btn btn-branded'
+      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '1.5s' }
         .about-content
-          = image_tag 'hardware.png'
+          %i.fa.fa-gears.fa-4x
           %h3
             Железо
           %p
             Занимаешься программирование, молодец! Тебе сюда!
+          %p
+            = link_to t('.send_request'), '#', class: 'btn btn-branded'
