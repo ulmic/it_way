@@ -41,7 +41,7 @@
   .row
     .form-group.col-xs-6
       = f.button :submit, t('.send_request'), class: 'btn-outline-dark'
-    .form-group.col-xs-6#subscribe_completed
+    .form-group.col-xs-6.completed
       = t('.subscribe_completed')
-    .form-group.col-xs-6#subscribe_not_completed
+    .form-group.col-xs-6.not_completed
       = t('.subscribe_not_completed')
