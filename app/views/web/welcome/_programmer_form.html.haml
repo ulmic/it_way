@@ -11,10 +11,13 @@
       = f.input :patronymic, as: :string, placeholder: t('activerecord.attributes.user.patronymic'), input_html: { data: { 'validation-required-message' => t('.enter_the_patronymic')  }  }
   .row.control-group
     .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :birth_date, as: :date_picker, placeholder: t('activerecord.attributes.user.birth_date'), input_html: { data: { 'validation-required-message' => t('.enter_the_birth_date')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
       = f.input :email, as: :string, placeholder: t('activerecord.attributes.user.email'), input_html: { data: { 'validation-required-message' => t('.enter_the_email')  }  }
   .row.control-group
     .form-group.col-xs-12.floating-label-form-group.controls
-      = f.input :phone, as: :string, placeholder: t('activerecord.attributes.user.patronymic'), input_html: { data: { 'validation-required-message' => t('.enter_the_patronymic')  }  }
+      = f.input :phone, as: :string, placeholder: t('activerecord.attributes.user.phone'), input_html: { data: { 'validation-required-message' => t('.enter_the_phone')  }  }
   .row.control-group
     .form-group.col-xs-12.floating-label-form-group.controls
       = f.input :region, as: :string, placeholder: t('activerecord.attributes.user.region'), input_html: { data: { 'validation-required-message' => t('.enter_the_region')  }  }

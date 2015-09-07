@@ -13,5 +13,6 @@ class AddAttributesToUser < ActiveRecord::Migration
     add_column :users, :reason, :text
     add_column :users, :has_i_note, :text
     add_column :users, :activity_line, :text
+    add_column :users, :birth_date, :datetime
   end
 end

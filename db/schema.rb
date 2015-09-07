@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150906235738) do
     t.text     "reason"
     t.text     "has_i_note"
     t.text     "activity_line"
+    t.datetime "birth_date"
   end
 
 end
