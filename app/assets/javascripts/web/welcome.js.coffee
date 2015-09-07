@@ -12,7 +12,6 @@ $(document).ready ->
   ).on "ajax:error", (e, xhr, status, error) ->
     $('#subscribe_not_completed').fadeIn(500)
     return
-  $('img.white').hide()
   $('.social a').hover ->
     $(this).children('img.white').hide()
     $(this).children('img.gray').show()
@@ -21,12 +20,9 @@ $(document).ready ->
     $(this).children('img.white').show()
     $(this).children('img.gray').hide()
     return
-  setTimeout (->
-    $('.portfolio').not('.showed_with_all').hide()
-  ), 1000
-  init_proposition_declare = ->
-    declare_form = $('#proposition_declare')
-    declare_form.hide()
-    $('a.attend').click ->
-      declare_form.slideDown()
+  $('form').hide()
+  $('a.form_show').click (e) ->
+    e.preventDefault()
+    id = $(@).data('target')
+    $("##{id}").slideDown()
   return

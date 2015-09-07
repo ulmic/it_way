@@ -1,4 +1,4 @@
-= simple_form_for @programmer, url: { controller: 'api/users', action: :create }, input_html: { name: 'sentMessage', novalidate: '' }, remote: true do |f|
+= simple_form_for @programmer, url: { controller: 'api/users', action: :create }, html: { id: :programmer }, input_html: { name: 'sentMessage', novalidate: '', id: :programmer }, remote: true do |f|
   = f.input :activity_line, as: :hidden, input_html: { value: :programmer }
   .row.control-group
     .form-group.col-xs-12.floating-label-form-group.controls
