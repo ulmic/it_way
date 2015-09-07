@@ -6,6 +6,14 @@ GIT
       railties (>= 3.1)
 
 GIT
+  remote: git://github.com/rails/actionform.git
+  revision: 41ec958375ce6eb0df45a7623541dcd72aea773e
+  ref: 41ec958
+  specs:
+    active_form (0.0.1)
+      rails (~> 4.1)
+
+GIT
   remote: git://github.com/ulmic/tconsole.git
   revision: daccf66423f2c2d222b27cced463762e08de56b6
   branch: rails4
@@ -480,6 +488,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_form!
   auto_html
   autoprefixer-rails
   bcrypt (~> 3.1.7)

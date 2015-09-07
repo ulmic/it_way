@@ -1,0 +1,16 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        last_name: Фамилия
+        first_name: Имя
+        patronymic: Отчество
+        phone: Телефон
+        email: E-mail
+        region: Регион
+        municipality: Муниципальное образование
+        locality: Населённый пункт
+        experience: Опишите свой опыт
+        reason: Почему вы хотите участвовать?
+        answer: Ответ
+        has_i_note: Если у вас ноутбук и можете ли вы взять его с собой?

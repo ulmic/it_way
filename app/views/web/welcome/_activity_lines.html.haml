@@ -15,6 +15,8 @@
             Занимаешься программирование, молодец! Тебе сюда!
           %p
             = link_to t('.send_request'), '#', class: 'btn btn-branded'
+          %p
+            = render 'programmer_form'
       .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '1s' }
         .about-content
           %i.fa.fa-paint-brush.fa-4x
@@ -24,6 +26,8 @@
             Занимаешься программирование, молодец! Тебе сюда!
           %p
             = link_to t('.send_request'), '#', class: 'btn btn-branded'
+          %p
+            = render 'designer_form'
       .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '1.5s' }
         .about-content
           %i.fa.fa-gears.fa-4x
@@ -33,3 +37,5 @@
             Занимаешься программирование, молодец! Тебе сюда!
           %p
             = link_to t('.send_request'), '#', class: 'btn btn-branded'
+          %p
+            = render 'circuitry_form'

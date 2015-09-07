@@ -3,3 +3,42 @@ ru:
     welcome:
       activity_lines:
         send_request: Подать заявку
+      programmer_form:
+        enter_the_last_name: Введите фамилию
+        enter_the_first_name: Введите имя
+        enter_the_email: Введите emailо
+        enter_the_patronymic: Отчество
+        enter_the_region: Введите регион
+        enter_the_municipality: Введите муниципальное образование
+        enter_the_locality: Введите населённый пунктъ
+        enter_the_experience: Введите свой опыт
+        enter_the_reason: Введите причину, по которой хотите участвовать
+        enter_the_answer: Введите ответ на вопрос
+        enter_the_has_i_note: ответьте на вопрос
+        send_request: Подать заявку
+      designer_form:
+        enter_the_last_name: Введите фамилию
+        enter_the_first_name: Введите имя
+        enter_the_email: Введите emailо
+        enter_the_patronymic: Отчество
+        enter_the_region: Введите регион
+        enter_the_municipality: Введите муниципальное образование
+        enter_the_locality: Введите населённый пунктъ
+        enter_the_experience: Введите свой опыт
+        enter_the_reason: Введите причину, по которой хотите участвовать
+        enter_the_answer: Введите ответ на вопрос
+        enter_the_has_i_note: ответьте на вопрос
+        send_request: Подать заявку
+      circuitry_form:
+        enter_the_last_name: Введите фамилию
+        enter_the_first_name: Введите имя
+        enter_the_email: Введите emailо
+        enter_the_patronymic: Отчество
+        enter_the_region: Введите регион
+        enter_the_municipality: Введите муниципальное образование
+        enter_the_locality: Введите населённый пунктъ
+        enter_the_experience: Введите свой опыт
+        enter_the_reason: Введите причину, по которой хотите участвовать
+        enter_the_answer: Введите ответ на вопрос
+        enter_the_has_i_note: ответьте на вопрос
+        send_request: Подать заявку

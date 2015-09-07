@@ -40,6 +40,7 @@ gem 'ransack'
 gem 'kaminari'
 gem 'virtus'
 gem 'mini_magick'
+gem 'active_form', github: 'rails/actionform', ref: '41ec958'
 gem 'rails-observers'
 gem 'rest_in_place'
 gem 'datetimepicker-rails', git: 'git://github.com/zpaulovics/datetimepicker-rails.git', branch: 'master', submodules: true
