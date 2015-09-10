@@ -54,6 +54,8 @@ gem 'coffee-rails'
 gem 'wysiwyg-rails'
 gem 'font-awesome-rails'
 gem 'auto_html'
+gem 'russia_regions'
+gem 'select2-rails'
 
 group :development, :test do
   gem 'byebug'

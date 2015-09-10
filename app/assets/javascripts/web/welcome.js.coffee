@@ -8,7 +8,7 @@ $(document).ready ->
       $('#user_email').prop('disabled', true)
       $('#user_city').prop('disabled', true)
       $form.children('.row .form-group.not_completed').hide()
-      $form.children('.row .form-group.completed').fadeIn(500)
+      $form.children('.row').children('.form-group.completed').fadeIn(500)
       return
     ).on "ajax:error", (e, xhr, status, error) ->
       $form.children('.row .form-group.not_completed').fadeIn(500)

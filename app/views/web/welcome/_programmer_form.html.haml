@@ -20,10 +20,7 @@
       = f.input :phone, as: :string, placeholder: t('activerecord.attributes.user.phone'), input_html: { data: { 'validation-required-message' => t('.enter_the_phone')  }  }
   .row.control-group
     .form-group.col-xs-12.floating-label-form-group.controls
-      = f.input :region, as: :string, placeholder: t('activerecord.attributes.user.region'), input_html: { data: { 'validation-required-message' => t('.enter_the_region')  }  }
-  .row.control-group
-    .form-group.col-xs-12.floating-label-form-group.controls
-      = f.input :municipality, as: :string, placeholder: t('activerecord.attributes.user.municipality'), input_html: { data: { 'validation-required-message' => t('.enter_the_municipality')  }  }
+      = f.input :region, as: :select, placeholder: t('activerecord.attributes.user.region'), input_html: { data: { 'validation-required-message' => t('.enter_the_region') }, class: :select2  }, collection: RussiaRegions.name_list
   .row.control-group
     .form-group.col-xs-12.floating-label-form-group.controls
       = f.input :locality, as: :string, placeholder: t('activerecord.attributes.user.locality'), input_html: { data: { 'validation-required-message' => t('.enter_the_locality')  }  }
@@ -45,6 +42,6 @@
     .form-group.col-xs-6
       = f.button :submit, t('.send_request'), class: 'btn-outline-dark'
     .form-group.col-xs-6.completed
-      = t('.subscribe_completed')
+      = t('.request_sended')
     .form-group.col-xs-6.not_completed
-      = t('.subscribe_not_completed')
+      = t('.request_not_sended')

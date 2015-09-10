@@ -18,6 +18,8 @@ ru:
         enter_the_phone: Введите телефон
         enter_the_birth_date: Введите дату рождения
         send_request: Подать заявку
+        request_sended: Заявка отправлена. Оргкомитет мероприятия свяжется с вами!
+        request_not_sended: "Заявка не отправлена. Напишите на <a href = 'mailto:admin@ulmic.ru'>admin@ulmic.ru</a>"
       designer_form:
         enter_the_last_name: Введите фамилию
         enter_the_first_name: Введите имя
@@ -33,6 +35,8 @@ ru:
         enter_the_phone: Введите телефон
         enter_the_birth_date: Введите дату рождения
         send_request: Подать заявку
+        request_sended: Заявка отправлена. Оргкомитет мероприятия свяжется с вами!
+        request_not_sended: "Заявка не отправлена. Напишите на <a href = 'mailto:admin@ulmic.ru'>admin@ulmic.ru</a>"
       circuitry_form:
         enter_the_last_name: Введите фамилию
         enter_the_first_name: Введите имя
@@ -48,3 +52,5 @@ ru:
         enter_the_phone: Введите телефон
         enter_the_birth_date: Введите дату рождения
         send_request: Подать заявку
+        request_sended: Заявка отправлена. Оргкомитет мероприятия свяжется с вами!
+        request_not_sended: "Заявка не отправлена. Напишите на <a href = 'mailto:admin@ulmic.ru'>admin@ulmic.ru</a>"
