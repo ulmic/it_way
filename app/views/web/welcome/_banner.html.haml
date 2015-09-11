@@ -1,9 +1,11 @@
-- unless @banner.nil?
-  %aside.cta-quote{ style: "background-image: url(#{@banner.image})" }
-    .container.wow.fadeIn
-      .row
-        .col-md-10.col-md-offset-1
-          %span.quote
-            = @banner.text
-          %hr.colored
-          = link_to @banner.text_on_link, @banner.url, class: 'btn btn-outline-light'
+%aside.cta-quote.banner
+  .container.wow.fadeIn
+    .row
+      .col-md-10.col-md-offset-1
+        %span.quote
+          = 'Следить за другими мероприятиями Молодёжного инициативного центра'
+        %hr.colored
+        = link_to 'ulmic.ru', 'http://ulmic.ru', class: 'btn btn-outline-light'
+%p{ style: 'text-align: right' }
+  На фотографии победители конкурса "Мистер и Мисс МИЦ 2015 года" Алим Бахтияров и
+  = link_to 'Юлия Крашенинникова', 'http://ulmic.ru/616', target: '_blank'

@@ -1,51 +1,34 @@
-%section.testimonials.bg-gray
+%section.testimonials.bg-gray{ style: 'padding-top: 0px' }
   .container.wow.fadeIn
+    %span
+      %h2{ style: 'padding-bottom: 26px' }
+        Кто приедет
     .row
       .col-lg-10.col-lg-offset-1
         .testimonials-carousel
-          - @propositions.each do |proposition|
-            .item
-              .row
-                .col-lg-12
-                  %p.lead
-                    Акция
-                  %hr.colored/
-                  %p.quote
-                    = proposition.text
-                  .testimonial-info
+          .item
+            .row
+              .col-lg-12
+                .row
+                  .col-md-6
                     .testimonial-img
-                      = image_tag '', class: 'img-circle img-responsive', alt: ""
-                    .testimonial-author
-                      %span.name
-                        Дата окончания
-                        =l proposition.end_date, format: '%d.%m.%Y'
-                        %br
-                        = link_to 'Участвовать', '#', data: { proposition_id: proposition.id }, class: 'btn attend'
-%section#proposition_declare
-  .container.wow.fadeIn
-    .row.content-row
-      .col-lg-8.col-lg-offset-2
-        = simple_form_for @declare, url: { controller: 'web/declares', action: :create }, input_html: { name: 'sentMessage', novalidate: '' }, remote: true do |f|
-          .row.control-group
-            .form-group.col-xs-12.floating-label-form-group.controls
-              = f.input :name, as: :string, placeholder: t('activerecord.attributes.user.name'), input_html: { data: { 'validation-required-message' => t('.enter_the_name')  }  }
-              %p.help-block.text-danger
-          .row.control-group
-            .form-group.col-xs-12.floating-label-form-group.controls
-              = f.input :email, as: :string, placeholder: t('activerecord.attributes.user.email'), input_html: { data: { 'validation-required-message' => t('.enter_the_email')  }  }
-              %p.help-block.text-danger
-          .row.control-group
-            .form-group.col-xs-12.floating-label-form-group.controls
-              = f.input :city, as: :string, placeholder: t('activerecord.attributes.user.city'), input_html: { data: { 'validation-required-message' => t('.enter_the_city')  }  }
-              %p.help-block.text-danger
-              = f.input :proposition_id, as: :hidden
-          %br
-          #success
-          .row
-            .form-group.col-xs-6
-              = f.button :submit, t('.subscribe_to_newsletter'), class: 'btn-outline-dark'
-            .form-group.col-xs-6#subscribe_completed
-              = t('.subscribe_completed')
-            .form-group.col-xs-6#subscribe_not_completed
-              = t('.subscribe_not_completed')
-
+                      = image_tag 'banner.jpg', class: 'img-responsive', alt: ""
+                  .col-md-6
+                    %p.lead
+                      Иван Иванов
+                    %hr.colored
+                    %p.quote
+                      Программирование - это мир
+          .item
+            .row
+              .col-lg-12
+                .row
+                  .col-md-6
+                    .testimonial-img
+                      = image_tag 'banner.jpg', class: 'img-responsive', alt: ""
+                  .col-md-6
+                    %p.lead
+                      Иван Иванов
+                    %hr.colored
+                    %p.quote
+                      Программирование - это мир
