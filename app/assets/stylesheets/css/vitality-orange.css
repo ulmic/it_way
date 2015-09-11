@@ -42,7 +42,7 @@ body {
 }
 
 a {
-    color: #f26f21;
+    color: #f15d46;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -94,7 +94,7 @@ hr.right {
 }
 
 hr.colored {
-    border-color: #f26f21;
+    border-color: #f15d46;
 }
 
 @media(min-width:768px) {
@@ -113,7 +113,7 @@ hr.colored {
 }
 
 .text-primary {
-    color: #f26f21;
+    color: #f15d46;
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -123,12 +123,12 @@ hr.colored {
 .navbar-inverse .navbar-nav>.active>a:hover,
 .navbar-inverse .navbar-nav>.active>a:focus {
     border-radius: 0;
-    color: #f26f21;
+    color: #f15d46;
     background-color: #fff;
 }
 
 .navbar-default {
-    background-color: #f26f21;
+    background-color: #f15d46;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -467,7 +467,7 @@ aside.cta-quote span.quote {
     font-size: 30px!important;
     line-height: 50px;
     color: #fff!important;
-    background-color: #f26f21!important;
+    background-color: #f15d46!important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -562,7 +562,7 @@ aside.cta-quote span.quote {
     font-size: 30px!important;
     line-height: 50px;
     color: #fff!important;
-    background-color: #f26f21!important;
+    background-color:  #F15D46 !important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -691,7 +691,7 @@ aside.cta-quote span.quote {
     font-size: 30px!important;
     line-height: 70px;
     color: #fff!important;
-    background-color: #f26f21!important;
+    background-color: #F15D46!important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -872,9 +872,9 @@ aside.cta-quote span.quote {
 }
 
 .portfolio-filter #filters li .filter.active {
-    border-color: #f26f21;
+    border-color: #F15D46;
     color: #fff;
-    background-color: #f26f21;
+    background-color: #F15D46;
 }
 
 #portfoliolist .portfolio {
@@ -910,7 +910,7 @@ aside.cta-quote span.quote {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #f26f21;
+    background: #f15d46;
 }
 
 #portfoliolist .portfolio .portfolio-wrapper .caption .caption-text {
@@ -1066,7 +1066,7 @@ aside.cta-quote span.quote {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #f26f21;
+    color: #F15D46;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -1125,7 +1125,7 @@ footer.footer .copyright p.small {
 .btn-outline-light:hover,
 .btn-outline-light:focus {
     outline: 0;
-    color: #f26f21;
+    color: #F15D46;
     background: #fff;
 }
 
@@ -1140,10 +1140,10 @@ footer.footer .copyright p.small {
 
 .btn-outline-dark:hover,
 .btn-outline-dark:focus {
-    border-color: #f26f21;
+    border-color: #F15D46;
     outline: 0;
     color: #fff;
-    background: #f26f21;
+    background: #f15d46;
 }
 
 .btn {
@@ -1174,7 +1174,7 @@ footer.footer .copyright p.small {
 
 .btn-full-width:hover {
     color: #fff;
-    background-color: #f26f21;
+    background-color: #f15d46;
 }
 
 .btn-full-width:focus {
