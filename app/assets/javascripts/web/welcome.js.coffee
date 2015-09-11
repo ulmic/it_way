@@ -27,7 +27,10 @@ $(document).ready ->
   $('form').hide()
   $('a.form_show').click (e) ->
     e.preventDefault()
-    $('form').slideUp()
     id = $(@).data('target')
-    $("##{id}").slideDown()
+    if $("##{id}").css('display') == 'none'
+      $('form').slideUp()
+      $("##{id}").slideDown()
+    else
+      $('form').slideUp()
   return
