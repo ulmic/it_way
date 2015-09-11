@@ -1,0 +1,47 @@
+= simple_form_for @programmer, url: { controller: 'api/users', action: :create }, html: { id: :programmer }, input_html: { name: 'sentMessage', novalidate: '', id: :programmer }, remote: true do |f|
+  = f.input :activity_line, as: :hidden, input_html: { value: :programmer }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :last_name, as: :string, placeholder: t('activerecord.attributes.user.last_name'), input_html: { data: { 'validation-required-message' => t('.enter_the_last_name')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :first_name, as: :string, placeholder: t('activerecord.attributes.user.first_name'), input_html: { data: { 'validation-required-message' => t('.enter_the_first_name')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :patronymic, as: :string, placeholder: t('activerecord.attributes.user.patronymic'), input_html: { data: { 'validation-required-message' => t('.enter_the_patronymic')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :birth_date, as: :date_picker, placeholder: t('activerecord.attributes.user.birth_date'), input_html: { data: { 'validation-required-message' => t('.enter_the_birth_date')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :email, as: :string, placeholder: t('activerecord.attributes.user.email'), input_html: { data: { 'validation-required-message' => t('.enter_the_email')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :phone, as: :string, placeholder: t('activerecord.attributes.user.phone'), input_html: { data: { 'validation-required-message' => t('.enter_the_phone')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :region, as: :select, placeholder: t('activerecord.attributes.user.region'), input_html: { data: { 'validation-required-message' => t('.enter_the_region') }, class: :select2  }, collection: RussiaRegions.name_list
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :locality, as: :string, placeholder: t('activerecord.attributes.user.locality'), input_html: { data: { 'validation-required-message' => t('.enter_the_locality')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :experience, as: :string, placeholder: t('activerecord.attributes.user.experience'), input_html: { data: { 'validation-required-message' => t('.enter_the_experience')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :reason, as: :string, placeholder: t('activerecord.attributes.user.reason'), input_html: { data: { 'validation-required-message' => t('.enter_the_reason')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :answer, as: :string, placeholder: t('activerecord.attributes.user.answer'), input_html: { data: { 'validation-required-message' => t('.enter_the_answer')  }  }
+  .row.control-group
+    .form-group.col-xs-12.floating-label-form-group.controls
+      = f.input :has_i_note, as: :string, placeholder: t('activerecord.attributes.user.has_i_note'), input_html: { data: { 'validation-required-message' => t('.enter_the_has_i_note')  }  }
+  %br
+  #success
+  .row
+    .form-group.col-xs-6
+      = f.button :submit, t('.send_request'), class: 'btn-outline-dark'
+    .form-group.col-xs-6.completed
+      = t('.request_sended')
+    .form-group.col-xs-6.not_completed
+      = t('.request_not_sended')

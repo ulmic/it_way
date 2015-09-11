@@ -1,0 +1,41 @@
+%section#about
+  .container-fluid
+    .row.text-center
+      .col-lg-12.wow.fadeIn
+        %h2
+          IT Way - форум перспектив будущего ИТ-специалиста
+        %hr.colored/
+    .row.text-center.content-row
+      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '.5s' }
+        .about-content
+          %i.fa.fa-code.fa-4x
+          %h3
+            Программирование
+          %p
+            Хочешь начать учиться программированию, но не знаешь с чего начать? Подай заявку
+          %p
+            = link_to 'Подать заявку на направление ПРОГРАММИРОВАНИЕ', '#', class: 'btn btn-branded form_show', data: { target: :programmer }
+          %p
+            = render 'programmer_form'
+      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '1s' }
+        .about-content
+          %i.fa.fa-paint-brush.fa-4x
+          %h3
+            Дизайн
+          %p
+            Тебе нравится ИТ, но писать код - это совсем не твоё? Жми кнопку ниже
+          %p
+            = link_to 'Подать заявку на направление ДИЗАЙН', '#', class: 'btn btn-branded form_show', data: { target: :designer }
+          %p
+            = render 'designer_form'
+      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '1.5s' }
+        .about-content
+          %i.fa.fa-gears.fa-4x
+          %h3
+            Железо
+          %p
+            Неравнодушен к микросхемам и хочешь собирать новые устройства? Тогда тебе сюда
+          %p
+            = link_to 'Подать заявку на направление ЖЕЛЕЗО', '#', class: 'btn btn-branded form_show', data: { target: :circuitry }
+          %p
+            = render 'circuitry_form'

@@ -1,3 +1,45 @@
 /*
  *= require_self
+ *= require select2
+ *= require select2-bootstrap
+ *= require_tree .
  */
+
+@import 'bootstrap-sprockets'
+@import 'bootstrap'
+
+@font-face
+  font-family: title_font
+  src: font-url('font.ttf')
+
+h1, h2, h3, h4, h5, h6
+  text-transform: uppercase
+  font-family: title_font
+  font-weight: 900
+
+.navbar-brand
+  display: none
+
+ul.nav.navbar-nav
+  li.dropdown
+    ul.dropdown-menu
+      li
+        a
+          color: black
+.social
+  a
+    img
+      height: 100px
+
+.copyright
+  a
+    color: #333 !important
+
+section
+  padding-top: 0px
+
+a.btn.btn-branded
+  border: 1px solid rgb(242, 111, 33)
+  border-radius: 3px
+  &:hover
+    border-color: #333
