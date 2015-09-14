@@ -31,6 +31,11 @@
     .form-group.col-xs-12.floating-label-form-group.controls
       = f.input :reason, as: :string, placeholder: t('activerecord.attributes.user.reason'), input_html: { data: { 'validation-required-message' => t('.enter_the_reason')  }  }
   .row.control-group
+    .alert.alert-info{ style: 'text-align: left' }
+      %h4
+        %i.fa.fa-question
+        Вопрос
+      = t('programmer.question')
     .form-group.col-xs-12.floating-label-form-group.controls
       = f.input :answer, as: :string, placeholder: t('activerecord.attributes.user.answer'), input_html: { data: { 'validation-required-message' => t('.enter_the_answer')  }  }
   .row.control-group
