@@ -41,6 +41,7 @@
   .row
     .form-group.col-xs-6
       = f.button :submit, t('.send_request'), class: 'btn-outline-dark'
+      %i.fa.fa-spin.fa-spinner
     .form-group.col-xs-6.completed
       = t('.request_sended')
     .form-group.col-xs-6.not_completed

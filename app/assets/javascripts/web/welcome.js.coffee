@@ -1,6 +1,7 @@
 $(document).ready ->
   $('.completed').hide()
   $('.not_completed').hide()
+  $('.fa-spinner').hide()
   init_form = ($form) ->
     $form.on("ajax:success", (e, data, status, xhr) ->
       $('#new_user :submit').prop('disabled', true)
@@ -9,9 +10,12 @@ $(document).ready ->
       $('#user_city').prop('disabled', true)
       $form.children('.row .form-group.not_completed').hide()
       $form.children('.row').children('.form-group.completed').fadeIn(500)
+      $form.find("input[type=text], textarea").val("")
+      $form.children('.row').last().children('.form-group').first().children('i').hide()
       return
     ).on "ajax:error", (e, xhr, status, error) ->
       $form.children('.row .form-group.not_completed').fadeIn(500)
+      $form.children('.row').last().children('.form-group').first().children('i').hide()
       return
   init_form $('form#programmer')
   init_form $('form#designer')
@@ -33,4 +37,6 @@ $(document).ready ->
       $("##{id}").slideDown()
     else
       $('form').slideUp()
+  $('.btn-outline-dark').click ->
+    $(@).parents('div').first().children('.fa-spinner').show()
   return
