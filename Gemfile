@@ -57,6 +57,7 @@ gem 'auto_html'
 gem 'russia_regions'
 gem 'select2-rails'
 gem 'sprockets'
+gem 'bootstrap-kaminari-views'
 
 group :development, :test do
   gem 'byebug'
@@ -86,8 +87,10 @@ group :development, :test do
 end
 
 group :test do
+  gem 'simplecov', require: false
   gem 'tconsole', github: 'ulmic/tconsole', branch: 'rails4'
-  gem 'wrong'
+  gem 'coveralls', require: false
+  gem 'webmock'
 end
 
 group :production do
