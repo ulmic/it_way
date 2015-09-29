@@ -1,0 +1,7 @@
+.container.mic-form-container
+  .row
+    .medium-6.small-12.columns.medium-push-3
+      = simple_form_for @user, url: { controller: 'web/sessions', action: :create }, method: :post do |f|
+        = f.input :email, as: :string
+        = f.input :password, required: true
+        = f.button :submit, t('helpers.enter'), class: "mic-flat-button"

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 module Concerns
   module AuthManagment
-    include TechinalPagesManagment
     def sign_in(user)
       session[:user_id] = user.id
     end
@@ -19,7 +18,7 @@ module Concerns
     end
 
     def authenticate_admin!
-      redirect_to not_found_page_path unless signed_as_admin?
+      redirect_to new_session_path unless signed_as_admin?
     end
 
     def authenticate_user!
