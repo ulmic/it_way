@@ -15,3 +15,10 @@ ru:
         answer: Ответ
         has_i_note: Есть у вас ноутбук и можете ли вы взять его с собой?
         birth_date: Дата рождения
+  state_machines:
+    user:
+      state:
+        states:
+          confirmed: Подтверждённые
+          unviewed: Непросмотренные
+          declined: Отклонённые
