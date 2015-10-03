@@ -3,6 +3,7 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require select2
+#= require tabs
 
 $ ->
   $('.select2').select2()
