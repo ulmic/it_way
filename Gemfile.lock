@@ -594,6 +594,3 @@ DEPENDENCIES
   web-console (= 2.0.0.beta2)
   webmock
   wysiwyg-rails
-
-BUNDLED WITH
-   1.10.6
