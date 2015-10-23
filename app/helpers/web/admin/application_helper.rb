@@ -44,4 +44,8 @@ module Web::Admin::ApplicationHelper
     constant = Team if constant.to_s.include? 'Team'
     constant.name.underscore.gsub '/', '_'
   end
+
+  def after_end_filling(date)
+    date > '24.10.2015'.to_datetime ? 'yellow' : ''
+  end
 end

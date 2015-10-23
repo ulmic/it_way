@@ -59,6 +59,7 @@ gem 'russia_regions'
 gem 'select2-rails'
 gem 'sprockets'
 gem 'bootstrap-kaminari-views'
+gem 'to_xls-rails'
 
 group :development, :test do
   gem 'byebug'
