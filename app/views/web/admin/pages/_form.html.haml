@@ -1,0 +1,10 @@
+.row
+  .col-lg-12
+    = render 'layouts/web/admin/shared/messages', object: @page_form
+.row
+  .col-lg-12
+    = simple_form_for [:admin, @page_form], input_html: { class: 'form-horizontal' } do |f|
+      = f.input :title, as: :string
+      = f.input :body
+      = f.button :submit, t('helpers.links.save'), class: 'btn-success'
+      = link_to t('helpers.links.back'), admin_pages_path, class: 'btn btn-default'
