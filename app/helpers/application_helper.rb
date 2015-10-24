@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include Concerns::AuthManagment
   def copyright_notice_year_range(start_year)
     start_year = start_year.to_i
     current_year = Time.new.year

@@ -8,13 +8,14 @@
         %span.icon-bar
       %a.navbar-brand{ href: root_path, style: 'display: inline' }
         = image_tag 'logo.svg', class: 'img-responsive', alt: ''
-    .collapse.navbar-collapse
-      %ul.nav.navbar-nav.navbar-right
-        %li.hidden
-          %a{ href: '#page-top' }
-        %li.dropdown
-          %a{ href: admin_users_path }
-            Users
-        %li.dropdown
-          %a{ href: admin_pages_path }
-            Pages
+    - if current_user && current_user.role.admin?
+      .collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li.hidden
+            %a{ href: '#page-top' }
+          %li.dropdown
+            %a{ href: admin_users_path }
+              Users
+          %li.dropdown
+            %a{ href: admin_pages_path }
+              Pages
