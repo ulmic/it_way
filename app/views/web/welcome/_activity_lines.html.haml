@@ -6,6 +6,10 @@
           IT Way - форум перспектив будущего ИТ-специалиста
         %hr.colored/
     .row.text-center.content-row
+      .col-md-offset-4.col-md-4
+        .about-content
+          = link_to 'Я подал заявку. Что дальше?', page_path(@page), class: 'btn btn-branded'
+    .row.text-center.content-row
       .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '.5s' }
         .about-content
           %i.fa.fa-code.fa-4x
@@ -17,9 +21,9 @@
             %i
               для учащихся 8-11 классов
           %p
-            = link_to 'Подать заявку', '#', class: 'btn btn-branded form_show', data: { target: :programmer }
-          %p
-            = render 'programmer_form'
+            .alert.alert-info
+              %i.fa.fa-info
+              Приём заявок завершён
       .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '1s' }
         .about-content
           %i.fa.fa-paint-brush.fa-4x
@@ -31,9 +35,9 @@
             %i
               для учащихся 8-11 классов и студентов
           %p
-            = link_to 'Подать заявку', '#', class: 'btn btn-branded form_show', data: { target: :designer }
-          %p
-            = render 'designer_form'
+            .alert.alert-info
+              %i.fa.fa-info
+              Приём заявок завершён
       .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '1.5s' }
         .about-content
           %i.fa.fa-gears.fa-4x
@@ -45,6 +49,6 @@
             %i
               для учащихся 8-11 классов и студентов
           %p
-            = link_to 'Подать заявку', '#', class: 'btn btn-branded form_show', data: { target: :circuitry }
-          %p
-            = render 'circuitry_form'
+            .alert.alert-info
+              %i.fa.fa-info
+              Приём заявок завершён
