@@ -34,7 +34,7 @@ class Web::Admin::PagesController < Web::Admin::ApplicationController
 
   def destroy
     @page = Page.find params[:id]
-    @page.remove
+    @page.destroy
     redirect_to admin_pages_path
   end
 end
