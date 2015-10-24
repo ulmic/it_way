@@ -1,0 +1,19 @@
+= paginate pages, theme: 'twitter-bootstrap-3'
+- model_class = Page
+%table.table.table-condensed.table-hover
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:title)
+      %th= t 'helpers.links.actions'
+  %tbody
+    - pages.each do |page|
+      %tr.link{ data: { href: edit_admin_page_path(page) }, class: after_end_filling(page.created_at) }
+        %td= page.id
+        %td= page.title
+        %td.actions
+          = link_to edit_admin_page_path(page), class: 'btn btn-warning btn-xs' do
+            %i.fa.fa-pencil
+          = link_to admin_page_path(page, page: { state: :declined }), method: :patch, class: 'btn btn-xs btn-danger' do
+            %i.fa.fa-close
+= paginate pages, theme: 'twitter-bootstrap-3'
