@@ -88,6 +88,10 @@ group :development, :test do
   gem 'pry-byebug'
 end
 
+group :development do
+  gem 'heroku'
+end
+
 group :test do
   gem 'simplecov', require: false
   gem 'tconsole', github: 'ulmic/tconsole', branch: 'rails4'
