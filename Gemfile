@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.0'
+
 gem 'rails', '4.2.1'
 gem 'responders', '~> 2.0'
 gem 'pg'
@@ -86,6 +88,10 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'pry-byebug'
+end
+
+group :development do
+  gem 'heroku'
 end
 
 group :test do

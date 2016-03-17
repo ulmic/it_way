@@ -7,3 +7,5 @@
 
 $ ->
   $('.select2').select2()
+  $('.link').click ->
+    location.href = $(this).data('href')
