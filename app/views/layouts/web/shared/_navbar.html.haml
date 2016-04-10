@@ -8,7 +8,7 @@
         %span.icon-bar
       %a.navbar-brand{ href: root_path, style: 'display: inline' }
         = image_tag 'logo.svg', class: 'img-responsive', alt: ''
-    - if current_user && current_user.role.admin?
+    - if current_user && current_user.admin?
       .collapse.navbar-collapse
         %ul.nav.navbar-nav.navbar-right
           %li.hidden

@@ -28,4 +28,8 @@ class User < ActiveRecord::Base
       transition :removed => :unviewed
     end
   end
+
+  def admin?
+    false
+  end
 end
