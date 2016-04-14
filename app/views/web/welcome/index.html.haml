@@ -1,23 +1,23 @@
 = javascript_include_tag 'web/welcome'
 = stylesheet_link_tag 'web/welcome'
-.page-header{ style: 'text-align: center' }
-  %h2
-    II форум перспектив будущего ИТ-специалиста
-.row.header
-  .col-md-6
+%header#top.header
+  .text-vertical-center
+    %h1
+      II форум перспектив будущего ИТ-специалиста
     = image_tag 'logo.svg'
-  .col-md-6
-    %h3
+    %br
+    %h2
       31 сентября - 4 августа 2016 года
-      %br
+    %h2
       ДООЦ "Юность"
       %br
       = link_to 'http://vk.com/it_way', class: 'sn vk' do
         = fa_icon 'vk 5x'
-      %br
       = link_to 'http://twitter.com/developerslogs', class: 'sn twitter' do
         = fa_icon 'twitter 5x'
-%hr
+
+    %a.btn.btn-dark.btn-lg{href: "#about"}
+      Подать заявку
 .row
   .col-md-offset-2.col-md-8.link{ data: { href: 'http://ulmic.ru/events/140' }}
     %h4
