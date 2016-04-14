@@ -1,0 +1,23 @@
+= paginate events, theme: 'twitter-bootstrap-3'
+- model_class = Event
+%table.table.table-condensed.table-hover
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:place)
+      %th= model_class.human_attribute_name(:date)
+      %th= model_class.human_attribute_name(:manager)
+      %th= t 'helpers.links.actions'
+  %tbody
+    - events.each do |event|
+      %tr.link{ data: { href: edit_admin_event_path(event) } }
+        %td= event.id
+        %td= event.place
+        %td= event.date
+        %td= event.manager
+        %td.actions
+          = link_to edit_admin_event_path(event), class: 'btn btn-warning btn-xs' do
+            %i.fa.fa-pencil
+          = link_to admin_event_path(event), method: :patch, class: 'btn btn-xs btn-danger' do
+            %i.fa.fa-close
+= paginate events, theme: 'twitter-bootstrap-3'
