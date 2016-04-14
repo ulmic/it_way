@@ -15,11 +15,26 @@
         = fa_icon 'vk 5x'
       = link_to 'http://twitter.com/developerslogs', class: 'sn twitter' do
         = fa_icon 'twitter 5x'
-
-    %a.btn.btn-dark.btn-lg{href: "#about"}
+    %a.btn.btn-dark.btn-lg{href: "#request"}
       Подать заявку
 .row
   .col-md-offset-2.col-md-8.link{ data: { href: 'http://ulmic.ru/events/140' }}
     %h4
       Прямая трансляция
     = image_tag 'http://ulmic.ru/system/uploads/event/main_photo/140/favicon.png', width: '100%'
+%section#request.request
+  .row
+    .col-md-offset-2.col-md-8
+      %h2.text-center Заявка
+      = simple_form_for @user_form, url: api_users_path, method: :post, remote: true, input_html: { class: 'form-horizontal' } do |f|
+        = f.input :last_name, as: :string
+        = f.input :first_name, as: :string
+        = f.input :patronymic, as: :string
+        = f.input :birth_date, as: :string
+        = f.input :email, as: :string, required: true
+        = f.input :phone, as: :string
+        = f.input :activity_line, collection: 1..3
+        = f.input :experience, as: :string
+        = f.input :reason, as: :string
+        = f.input :has_i_note, as: :string
+        = f.button :submit, "ПОДАТЬ ЗАЯВКУ", class: 'text-center btn btn-dark btn-lg'
