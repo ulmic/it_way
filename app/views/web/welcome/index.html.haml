@@ -1,6 +1,6 @@
 = javascript_include_tag 'web/welcome'
 = stylesheet_link_tag 'web/welcome'
-%header#top.header
+%header#top.header{ style: "background-image: url('assets/headers/#{rand(4) + 1}.jpg')"}
   .text-vertical-center
     %h1
       II форум перспектив будущего ИТ-специалиста
@@ -11,6 +11,7 @@
     %h2
       ДООЦ "Юность"
       %br
+    %hr
     %a.btn.btn-dark.btn-lg{href: "#request"}
       Подать заявку
     -#%h2
