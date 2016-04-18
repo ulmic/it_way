@@ -1,6 +1,13 @@
 %html
   = render 'layouts/web/shared/head'
-  %body#page-top
+  %body#page
+    .mainpage-social
+      .social-icon.vk
+        = link_to 'http://vk.com/it_way', target: '_blank' do
+          = fa_icon 'vk 3x'
+      .social-icon.twitter
+        = link_to 'http://twitter.com/developerslogs', target: '_blank' do
+          = fa_icon 'twitter 3x'
     - if request.path == root_path
       = yield
       = render 'layouts/web/shared/footer'

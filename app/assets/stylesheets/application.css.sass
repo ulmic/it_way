@@ -46,13 +46,28 @@ a.btn.btn-branded
   &:hover
     border-color: #333
 
-.sn
-  &:hover
-    opacity: 0.8
-  &.vk
-    color: #45668e
-  &.twitter
-    color: #55acee
 
 .link
   cursor: pointer
+
+.mainpage-social 
+  z-index: 100
+  position: fixed
+  top: 21.5%
+  right: -4px
+  width: 4.5em
+  height: 4.5em
+
+  .social-icon 
+    &.vk
+      background-color: #45668e
+    &.twitter
+      background-color: #55acee
+    a
+      color: white
+      &:hover
+        opacity: 0.5
+    display: block
+    border: none !important
+    text-align: center
+    cursor: pointer
