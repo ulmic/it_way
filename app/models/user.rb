@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   extend Enumerize
   enumerize :role, in: [ :user, :admin, :author ], default: :user
+  enumerize :activity_line, in: [ :programming, :design, :steel ]
 
   include UserScopes
 
