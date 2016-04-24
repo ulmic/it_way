@@ -30,6 +30,9 @@
         = f.input :birth_date, as: :date_picker
         = f.input :email, as: :string, required: true
         = f.input :phone, as: :string
+        = f.input :region, collection: RussiaRegions.name_list
+        = f.input :locality, as: :string
+        = f.input :school, as: :string
         = f.input :activity_line
         = f.input :experience, as: :string
         = f.input :reason, as: :string

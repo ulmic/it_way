@@ -16,8 +16,8 @@ $(document).ready ->
       # $form.children('.row').last().children('.form-group').first().children('i').hide()
       return
     ).on "ajax:error", (e, xhr, status, error) ->
-      $form.children('.row .form-group.not_completed').fadeIn(500)
-      $form.children('.row').last().children('.form-group').first().children('i').hide()
+      $(".bg-danger").html()
+      $form.before("<p class='bg-danger'> Произошла ошибка:<br>" + xhr.responseJSON['errors'] + "</p>")
       return
   init_form $('form#programmer')
   init_form $('form#new_user')
