@@ -4,10 +4,16 @@
     .mainpage-social
       .social-icon.vk
         = link_to 'http://vk.com/it_way', target: '_blank' do
-          = fa_icon 'vk 3x'
+          %span.icon
+            = fa_icon 'vk 3x'
+            %span.label
+              Подписаться
       .social-icon.twitter
         = link_to 'http://twitter.com/developerslogs', target: '_blank' do
-          = fa_icon 'twitter 3x'
+          %span.icon
+            = fa_icon 'twitter 3x'
+            %span.label
+              Подписаться
     - if request.path == root_path
       = yield
       = render 'layouts/web/shared/footer'
