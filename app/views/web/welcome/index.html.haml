@@ -19,6 +19,7 @@
     %hr
     %a.btn.btn-dark.btn-lg{href: "#request"}
       Подать заявку
+= render 'activity_lines'
 %section#request.request
   .row
     .col-md-offset-2.col-md-8
@@ -39,3 +40,4 @@
         = f.input :reason, as: :string
         = f.input :has_i_note, as: :string
         = f.button :submit, "ПОДАТЬ ЗАЯВКУ", class: 'text-center btn btn-dark btn-lg'
+= render 'footer'
