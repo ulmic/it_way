@@ -1,11 +1,16 @@
 = javascript_include_tag 'web/welcome'
 = stylesheet_link_tag 'web/welcome'
 %header#top.header{ style: "background-image: url('assets/headers/#{rand(4) + 1}.jpg')"}
-  .text-vertical-center
-    %h1
-      II форум перспектив будущего ИТ-специалиста
-    = image_tag 'logo.svg'
-    %br
+  .text-vertical-left
+    .row
+      .col-md-3
+        = image_tag 'logo.png', class: :logo
+      .col-md-9
+        .text-vertical-right.title
+          %h1
+            II форум перспектив будущего ИТ-специалиста
+          %br
+  .text-vertical-center{ style: 'width: 100%' }
     %h2
       31 сентября - 4 августа 2016 года
     %h2
@@ -14,11 +19,6 @@
     %hr
     %a.btn.btn-dark.btn-lg{href: "#request"}
       Подать заявку
-    -#%h2
-      = link_to 'http://vk.com/it_way', class: 'sn vk' do
-        = fa_icon 'vk 5x'
-      = link_to 'http://twitter.com/developerslogs', class: 'sn twitter' do
-        = fa_icon 'twitter 5x'
 %section#request.request
   .row
     .col-md-offset-2.col-md-8
