@@ -15,6 +15,9 @@ ru:
         answer: Ответ
         has_i_note: Есть у вас ноутбук и можете ли вы взять его с собой?
         birth_date: Дата рождения
+        activity_line: Направление на форуме
+        school: Учебное заведение
+        group: Класс/группа
   state_machines:
     user:
       state:
@@ -22,3 +25,9 @@ ru:
           confirmed: Подтверждённые
           unviewed: Непросмотренные
           declined: Отклонённые
+  enumerize:
+    user:
+      activity_line:
+        programming: Программирование
+        design: Дизайн
+        steel: Железо

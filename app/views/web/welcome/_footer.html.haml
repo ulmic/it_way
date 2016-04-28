@@ -1,25 +1,40 @@
-%footer.footer
+%footer
+  .container
+    .row
+      .col-lg-10.col-lg-offset-1.text-center
+        %h4
+          %strong II форум перпектив будущего ИТ-специалиста IT Way'16<F2>
+        %p
+          Ульяновская область
+        %ul.list-unstyled
+          %li
+            = fa_icon :phone
+            = tel_tag '+7 (8422) 727276'
+          %li
+            = fa_icon :envelope
+            = mail_to 'itway@ulmic.ru'
+        %br/
+        %ul.list-inline
+          = link_to configus.social_links.vk do
+            = fa_icon 'vk 3x fw'
+          = link_to configus.social_links.twitter do
+            = fa_icon 'twitter 3x fw'
+        %hr.small/
   .container.text-center
     .row.social
-      .col-md-2.col-md-offset-1
+      .col-md-3.col-md-offset-1
         %a{ href: 'http://ulmic.ru', target: '_blank' }
           = image_tag 'project_it.png'
-      .col-md-2
+      .col-md-3
         %a{ href: 'http://ulmic.ru', target: '_blank' }
           = image_tag 'logo-mic-square.png'
-      .col-md-2
-        %a{ href: 'http://ulstu.ru', target: '_blank' }
-          = image_tag 'logo-ulstu.png'
-      .col-md-2
+      .col-md-3
         %a{ href: 'http://vk.com/futurelab', target: '_blank' }
           = image_tag 'futurelab.jpg'
-      .col-md-2
-        %a{ href: 'http://юнпресс.рф', target: '_blank' }
-          = image_tag 'logo-unpress.png'
-    .row.copyright
       .col-lg-12
-        %p.small{ style: 'color: #000' }
-          &copy
+        %hr.small/
+        %p.text-muted
+          ©
           = copyright_notice_year_range 2015
           &nbsp
           = link_to 'Молодёжный инициативный центр', 'http://ulmic.ru', target: '_blank'

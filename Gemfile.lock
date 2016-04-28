@@ -6,12 +6,25 @@ GIT
       railties (>= 3.1)
 
 GIT
+  remote: git://github.com/fnando/i18n-js.git
+  revision: 2ca6d31365bb41db21e373d126cac00d38d15144
+  specs:
+    i18n-js (3.0.0.rc12)
+      i18n (~> 0.6, >= 0.6.6)
+
+GIT
   remote: git://github.com/rails/actionform.git
   revision: 41ec958375ce6eb0df45a7623541dcd72aea773e
   ref: 41ec958
   specs:
     active_form (0.0.1)
       rails (~> 4.1)
+
+GIT
+  remote: git://github.com/seuros/state_machine.git
+  revision: 95ba53f03e5657a5873343c2b1dc6a148ea3542e
+  specs:
+    state_machine (1.2.0)
 
 GIT
   remote: git://github.com/ulmic/tconsole.git
@@ -31,19 +44,6 @@ GIT
   specs:
     datetimepicker-rails (4.7.16)
       momentjs-rails (>= 2.9.0)
-
-GIT
-  remote: https://github.com/fnando/i18n-js
-  revision: 968837d676e23a8d630a866f925e09b3a0f8fba6
-  specs:
-    i18n-js (3.0.0.rc11)
-      i18n (~> 0.6)
-
-GIT
-  remote: https://github.com/seuros/state_machine.git
-  revision: 95ba53f03e5657a5873343c2b1dc6a148ea3542e
-  specs:
-    state_machine (1.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -335,6 +335,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.8.0)
     monadic (0.8.1)
+    more_html_tags (0.1.0)
     multi_json (1.11.2)
     nenv (0.2.0)
     net-scp (1.2.1)
@@ -582,6 +583,7 @@ DEPENDENCIES
   mini_magick
   momentjs-rails (>= 2.8.1)!
   monadic
+  more_html_tags
   pg
   pry-byebug
   pry-rails
@@ -618,3 +620,6 @@ DEPENDENCIES
   web-console (= 2.0.0.beta2)
   webmock
   wysiwyg-rails
+
+BUNDLED WITH
+   1.11.2

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       root to: 'welcome#index'
       resources :users, except: :show
       resources :pages, except: :show
+      resources :events, except: :show
     end
   end
 end
