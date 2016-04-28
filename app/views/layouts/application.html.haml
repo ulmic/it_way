@@ -3,17 +3,17 @@
   %body#page
     .mainpage-social
       .social-icon.vk
-        = link_to 'http://vk.com/it_way', target: '_blank' do
+        = link_to configus.social_links.vk, target: '_blank' do
           %span.icon
             = fa_icon 'vk 3x'
             %span.label
-              Подписаться
+              = render 'layouts/web/shared/social/vk_subscribe'
       .social-icon.twitter
-        = link_to 'http://twitter.com/developerslogs', target: '_blank' do
+        = link_to configus.social_links.twitter, target: '_blank' do
           %span.icon
             = fa_icon 'twitter 3x'
             %span.label
-              Подписаться
+              = render 'layouts/web/shared/social/twitter_subscribe'
     - if request.path == root_path
       = yield
       = render 'layouts/web/shared/footer'

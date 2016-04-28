@@ -62,21 +62,23 @@ a.btn.btn-branded
   width: 4.5em
   height: 4.5em
 
-  .social-icon:hover
-    right: 200px
-
   .social-icon
-    width: 270px
     &.vk
+      &:hover
+        right: 300px
+      width: 370px
       background-color: #45668e
       .icon
         display: inline-flex
         padding: 0 5px
       .label
         font-size: 25px
-        background-color: #45668e
+        background-color: white
         margin: auto 20px
     &.twitter
+      &:hover
+        right: 146px
+      width: 216px
       background-color: #55acee
       .icon
         display: inline-flex
@@ -88,8 +90,6 @@ a.btn.btn-branded
     a
       text-decoration: none
       color: white
-      &:hover
-        opacity: 0.5
     position: relative
     display: block
     border: none !important
