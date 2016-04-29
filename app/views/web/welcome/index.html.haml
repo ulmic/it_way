@@ -21,7 +21,7 @@
       Подать заявку
 = render 'activity_lines'
 %section#request.request
-  .row
+  .row{style: "margin-right: 0px"}
     .col-md-offset-2.col-md-8
       %h2.text-center Заявка
       = simple_form_for @user_form, url: api_users_path, method: :post, remote: true, input_html: { class: 'form-horizontal' } do |f|
