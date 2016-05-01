@@ -1,3 +1,7 @@
+$.extend($.scrollTo.defaults, {
+    axis: 'y',
+    duration: 2000
+})
 $(document).ready ->
   $('.completed').hide()
   $('.not_completed').hide()
@@ -42,4 +46,7 @@ $(document).ready ->
       $('form').slideUp()
   $('.btn-outline-dark').click ->
     $(@).parents('div').first().children('.fa-spinner').show()
+  $('.scroll').click (e) ->
+    e.preventDefault()
+    $.scrollTo "##{$(@).data('id')}"
   return
