@@ -8,7 +8,7 @@ $(document).ready ->
   $('.fa-spinner').hide()
   init_form = ($form) ->
     $form.on("ajax:success", (e, data, status, xhr) ->
-      $form.hide();
+      $form.hide()
       $form.parent().html("<h3> Заявка принята! </h3>")
       # $('#new_user :submit').prop('disabled', true)
       # $('#user_name').prop('disabled', true)
