@@ -11,7 +11,7 @@
   font-family: 'mic'
   src: font-url('PFBeauSansPro-Light.ttf')
 
-@font-face 
+@font-face
   font-family: 'mic-bold'
   src: font-url('PFSquareSansPro-Medium.ttf')
 
@@ -54,6 +54,30 @@ a.btn.btn-branded
 .link
   cursor: pointer
 
+@keyframes social-vk-right
+  from
+    right: 0px
+  to
+    right: 300px
+
+@-webkit-keyframes social-vk-right
+  from
+    right: 0px
+  to
+    right: 300px
+
+@keyframes social-twitter-right
+  from
+    right: 0px
+  to
+    right: 146px
+
+@-webkit-keyframes social-twitter-right
+  from
+    right: 0px
+  to
+    right: 146px
+
 .mainpage-social
   z-index: 100
   position: fixed
@@ -65,7 +89,8 @@ a.btn.btn-branded
   .social-icon
     &.vk
       &:hover
-        right: 300px
+        animation: social-vk-right 1s 1 normal forwards
+        -webkit-animation: social-vk-right 1s 1 normal forwards
       width: 370px
       background-color: #45668e
       .icon
@@ -77,6 +102,8 @@ a.btn.btn-branded
         margin: auto 20px
     &.twitter
       &:hover
+        animation: social-twitter-right 1s 1 normal forwards
+        -webkit-animation: social-twitter-right 1s 1 normal forwards
         right: 146px
       width: 216px
       background-color: #55acee
@@ -95,10 +122,15 @@ a.btn.btn-branded
     border: none !important
     text-align: center
     cursor: pointer
-.bg-primary.services
-  background-color: #00c6f7
+.bg-primary
+  &.services, &.price
+    background-color: #00c6f7
   .text-primary
     color: #00c6f7
 
 footer
   padding-bottom: 0 !important
+
+.famous
+  border-radius: 50%
+  width: 100%

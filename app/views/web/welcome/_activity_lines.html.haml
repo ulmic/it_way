@@ -14,6 +14,7 @@
                 %strong Программирование
               %p
                 Хочешь научиться программировать, но не знаешь с чего начать? Подай заявку
+              = link_to 'Узнать больше', '#', class: 'btn btn-light scroll', data: { id: :programming } 
           .col-md-4.col-sm-6
             .service-item
               %span.fa-stack.fa-4x
@@ -21,7 +22,9 @@
                 %i.fa.fa-paint-brush.fa-stack-1x.text-primary
               %h4
                 %strong Дизайн
-              %p Тебе нравится ИТ, но писать код - это совсем не твоё? На IT Way ты научишься основам дизайна
+              %p 
+                Тебе нравится ИТ, но писать код - это совсем не твоё? На IT Way ты научишься основам дизайна
+              = link_to 'Узнать больше', '#', class: 'btn btn-light scroll', data: { id: :design }
           .col-md-4.col-sm-6
             .service-item
               %span.fa-stack.fa-4x
@@ -30,3 +33,4 @@
               %h4
                 %strong Железо
               %p Неравнодушен к микросхемам и хочешь собирать новые устройства? Тогда тебе сюда
+              = link_to 'Узнать больше', '#', class: 'btn btn-light scroll', data: { id: :steel }

@@ -1,10 +1,14 @@
+$.extend($.scrollTo.defaults, {
+    axis: 'y',
+    duration: 2000
+})
 $(document).ready ->
   $('.completed').hide()
   $('.not_completed').hide()
   $('.fa-spinner').hide()
   init_form = ($form) ->
     $form.on("ajax:success", (e, data, status, xhr) ->
-      $form.hide();
+      $form.hide()
       $form.parent().html("<h3> Заявка принята! </h3>")
       # $('#new_user :submit').prop('disabled', true)
       # $('#user_name').prop('disabled', true)
@@ -42,4 +46,7 @@ $(document).ready ->
       $('form').slideUp()
   $('.btn-outline-dark').click ->
     $(@).parents('div').first().children('.fa-spinner').show()
+  $('.scroll').click (e) ->
+    e.preventDefault()
+    $.scrollTo "##{$(@).data('id')}"
   return

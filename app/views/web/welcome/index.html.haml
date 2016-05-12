@@ -2,7 +2,7 @@
 = stylesheet_link_tag 'web/welcome'
 %header#top.header{ style: "background-image: url('assets/headers/#{rand(4) + 1}.jpg')"}
   .text-vertical-left
-    .row
+    .row{style: "margin-right: 0px"}
       .col-md-3
         = image_tag 'logo.png', class: :logo
       .col-md-9
@@ -21,7 +21,7 @@
       Подать заявку
 = render 'activity_lines'
 %section#request.request
-  .row
+  .row{style: "margin-right: 0px"}
     .col-md-offset-2.col-md-8
       %h2.text-center Заявка
       = simple_form_for @user_form, url: api_users_path, method: :post, remote: true, input_html: { class: 'form-horizontal' } do |f|
@@ -40,4 +40,9 @@
         = f.input :reason, as: :string
         = f.input :has_i_note, as: :string
         = f.button :submit, "ПОДАТЬ ЗАЯВКУ", class: 'text-center btn btn-dark btn-lg'
+= render 'programming'
+= render 'design'
+= render 'steel'
+= render 'price'
+= render 'portfolio'
 = render 'footer'
