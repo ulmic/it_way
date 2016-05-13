@@ -1,0 +1,12 @@
+.row
+  .col-lg-12
+    = render 'layouts/web/admin/shared/messages', object: @event
+.row
+  .col-lg-12
+    = simple_form_for [:admin, @event], input_html: { class: 'form-horizontal' } do |f|
+      = f.input :place
+      = f.input :date, as: :datetime
+      = f.input :manager
+      = f.input :photo, as: :file
+      = f.button :submit, t('helpers.links.save'), class: 'btn-success'
+      = link_to t('helpers.links.back'), admin_events_path, class: 'btn btn-default'

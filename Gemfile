@@ -8,26 +8,16 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'haml-rails'
-
 gem 'sinatra', '>= 1.3.0', require: nil
-
 gem 'bower-rails'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
 gem 'less-rails'
-gem 'state_machine', git: 'https://github.com/seuros/state_machine.git'
-gem 'i18n-js', git: 'https://github.com/fnando/i18n-js'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-#gem 'jbuilder', '~> 2.0'
-
-# Use ActiveModel has_secure_password
+gem 'state_machine', github: 'seuros/state_machine'
+gem 'i18n-js', github: 'fnando/i18n-js'
 gem 'bcrypt', '~> 3.1.7'
-
 gem 'term-ansicolor'
 gem 'configus'
 gem 'simple_form', '>= 3.1.0.rc2'
@@ -46,7 +36,7 @@ gem 'mini_magick'
 gem 'active_form', github: 'rails/actionform', ref: '41ec958'
 gem 'rails-observers'
 gem 'rest_in_place'
-gem 'datetimepicker-rails', git: 'git://github.com/zpaulovics/datetimepicker-rails.git', branch: 'master', submodules: true
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'momentjs-rails', '>= 2.8.1',  github: 'derekprior/momentjs-rails'
 gem 'unicorn-rails'
 gem 'bootstrap-sass'
@@ -62,6 +52,7 @@ gem 'select2-rails'
 gem 'sprockets'
 gem 'bootstrap-kaminari-views'
 gem 'to_xls-rails'
+gem 'more_html_tags'
 
 group :development, :test do
   gem 'byebug'

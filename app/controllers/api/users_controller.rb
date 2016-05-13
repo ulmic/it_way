@@ -5,7 +5,7 @@ class Api::UsersController < ApplicationController
     if @user_form.save
       head :ok
     else
-      head :bad_request
+      render json: {errors: @user_form.errors.full_messages.join("<br>")}, status: :bad_request
     end
   end
 end

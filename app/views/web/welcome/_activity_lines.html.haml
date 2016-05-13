@@ -1,54 +1,36 @@
-%section#about
-  .container-fluid
+%section#services.services.bg-primary
+  .container
     .row.text-center
-      .col-lg-12.wow.fadeIn
-        %h2
-          IT Way - форум перспектив будущего ИТ-специалиста
-        %hr.colored/
-    .row.text-center.content-row
-      .col-md-offset-4.col-md-4
-        .about-content
-          = link_to 'Я подал заявку. Что дальше?', page_path(@page), class: 'btn btn-branded'
-    .row.text-center.content-row
-      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '.5s' }
-        .about-content
-          %i.fa.fa-code.fa-4x
-          %h3
-            Программирование
-          %p
-            Хочешь научиться программировать, но не знаешь с чего начать? Подай заявку
-          %p
-            %i
-              для учащихся 8-11 классов
-          %p
-            .alert.alert-info
-              %i.fa.fa-info
-              Приём заявок завершён
-      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '1s' }
-        .about-content
-          %i.fa.fa-paint-brush.fa-4x
-          %h3
-            Дизайн
-          %p
-            Тебе нравится ИТ, но писать код - это совсем не твоё? Жми кнопку ниже
-          %p
-            %i
-              для учащихся 8-11 классов и студентов
-          %p
-            .alert.alert-info
-              %i.fa.fa-info
-              Приём заявок завершён
-      .col-md-4.col-sm-6.wow.fadeIn{ 'data-wow-delay' => '1.5s' }
-        .about-content
-          %i.fa.fa-gears.fa-4x
-          %h3
-            Железо
-          %p
-            Неравнодушен к микросхемам и хочешь собирать новые устройства? Тогда тебе сюда
-          %p
-            %i
-              для учащихся 8-11 классов и студентов
-          %p
-            .alert.alert-info
-              %i.fa.fa-info
-              Приём заявок завершён
+      .col-lg-10.col-lg-offset-1
+        %h2 Направления на IT Way'16
+        %hr.small/
+        .row
+          .col-md-4.col-sm-6
+            .service-item
+              %span.fa-stack.fa-4x
+                %i.fa.fa-circle.fa-stack-2x
+                %i.fa.fa-code.fa-stack-1x.text-primary
+              %h4
+                %strong Программирование
+              %p
+                Хочешь научиться программировать, но не знаешь с чего начать? Подай заявку
+              = link_to 'Узнать больше', '#', class: 'btn btn-light scroll', data: { id: :programming } 
+          .col-md-4.col-sm-6
+            .service-item
+              %span.fa-stack.fa-4x
+                %i.fa.fa-circle.fa-stack-2x
+                %i.fa.fa-paint-brush.fa-stack-1x.text-primary
+              %h4
+                %strong Дизайн
+              %p 
+                Тебе нравится ИТ, но писать код - это совсем не твоё? На IT Way ты научишься основам дизайна
+              = link_to 'Узнать больше', '#', class: 'btn btn-light scroll', data: { id: :design }
+          .col-md-4.col-sm-6
+            .service-item
+              %span.fa-stack.fa-4x
+                %i.fa.fa-circle.fa-stack-2x
+                %i.fa.fa-gears.fa-stack-1x.text-primary
+              %h4
+                %strong Железо
+              %p Неравнодушен к микросхемам и хочешь собирать новые устройства? Тогда тебе сюда
+              = link_to 'Узнать больше', '#', class: 'btn btn-light scroll', data: { id: :steel }
