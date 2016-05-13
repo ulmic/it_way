@@ -1,26 +1,18 @@
-%section
-  .container.text-center.wow.fadeIn
-    %h2
-      = block.title
-    %hr.colored
-    %p
-      = block.text
-    .row.content-row
-      .col-lg-12
-        .portfolio-filter
-          %ul#filters.clearfix
-            - @project_types.each_with_index do |project_type, i|
-              %li
-                %span.filter{ data: { filter: project_type }, class: ( i == 0 ? :active : '' ) }
-                  = localize_enum project_type, :project_type, :video
+%section#portfolio.portfolio
+  .container
     .row
-      .col-lg-12
-        #portfoliolist
-          - @videos.each_with_index do |video, i|
-            .portfolio{ class: video.project_type, data: { cat: video.project_type, toggle: :modal, href: "#portfolioModal#{i + 1}" }, style: 'display: none' }
-              .portfolio-wrapper
-                = video_embed(video)
-          - @showed_with_all_video.each_with_index do |video, i|
-            .portfolio.showed_with_all{ class: :showed_with_all, data: { cat: :showed_with_all, toggle: :modal, href: "#portfolioModal#{i + 1 + @videos.count}" } }
-              .portfolio-wrapper
-                = video_embed(video)
+      .col-lg-10.col-lg-offset-1.text-center
+        %h2 Портфолио организаторов
+        %p
+          Ульяновская областная молодёжная общественная организация "Молодёжный инициативный центр"     
+        %hr.small/
+        .row
+          - [ :lider, :informat ].each do |event|
+            .col-md-6
+              .portfolio-item
+                = link_to configus.links.send(event), class: :blank do
+                  = image_tag "#{event}.jpg", class: 'img-portfolio img-responsive'
+        .row
+          .col-md-12
+            = link_to configus.links.ulmic, class: :blank do
+              = image_tag 'horizontal-logo-mic.png'
