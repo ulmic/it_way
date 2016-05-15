@@ -1,6 +1,7 @@
 class Api::UsersController < ApplicationController
   def create
     @user_form = UserForm.new_with_model
+    params[:user][:year] = configus.current_year
     @user_form.submit params[:user]
     if @user_form.save
       head :ok

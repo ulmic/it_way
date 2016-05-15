@@ -11,6 +11,7 @@ Configus.build Rails.env do
       aam 'http://ulmic.ru/events/69'
       ulmic 'http://ulmic.ru'
     end
+    current_year 2016
   end
 
   env :development, parent: :production
