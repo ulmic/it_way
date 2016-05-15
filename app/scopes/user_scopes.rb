@@ -8,5 +8,6 @@ module UserScopes
     scope :unviewed, -> { where(state: :unviewed, type: nil).where.not(email: nil, state: :removed).order('id DESC') }
     scope :confirmed, -> { where(state: :confirmed).order('id DESC') }
     scope :declined, -> { where(state: :declined).order('id DESC') }
+    scope :current_year, -> { where(year: configus.current_year) }
   end
 end

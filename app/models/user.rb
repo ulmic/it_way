@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_secure_password validations: false
   validates :email, presence: true,
                     email: true,
-                    uniqueness: true
+                    uniqueness: { scope: :year }
 
   extend Enumerize
   enumerize :role, in: [ :user, :admin, :author ], default: :user
