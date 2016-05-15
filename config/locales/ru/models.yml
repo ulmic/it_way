@@ -18,6 +18,12 @@ ru:
         activity_line: Направление на форуме
         school: Учебное заведение
         group: Класс/группа
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              email: имеет неверный формат
   state_machines:
     user:
       state:
