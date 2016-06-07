@@ -18,6 +18,9 @@ ru:
         activity_line: Направление на форуме
         school: Учебное заведение
         group: Класс/группа
+        password: Пароль
+      admin:
+        password: Пароль
     errors:
       models:
         user:

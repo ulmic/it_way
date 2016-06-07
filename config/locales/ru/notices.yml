@@ -1,0 +1,4 @@
+ru:
+  web:
+    notices:
+      wrong_password: Неверный email или пароль

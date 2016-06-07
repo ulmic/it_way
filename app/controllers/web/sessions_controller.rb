@@ -11,11 +11,11 @@ class Web::SessionsController < Web::ApplicationController
         sign_in @user
         redirect_to admin_root_path
       else
-        render :new
+        render :new, notice: 'wrong_password'
       end
     else
       @user = UserForm.new_with_model
-      render :new
+      render :new, notice: 'wrong_password'
     end
   end
 
