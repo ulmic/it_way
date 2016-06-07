@@ -1,5 +1,8 @@
 ru:
   activerecord:
+    models:
+      user: Участник
+      admin: Администратор
     attributes:
       user:
         last_name: Фамилия
@@ -18,6 +21,9 @@ ru:
         activity_line: Направление на форуме
         school: Учебное заведение
         group: Класс/группа
+        password: Пароль
+      admin:
+        password: Пароль
     errors:
       models:
         user:
@@ -26,6 +32,12 @@ ru:
               email: имеет неверный формат
   state_machines:
     user:
+      state:
+        states:
+          confirmed: Подтверждённые
+          unviewed: Непросмотренные
+          declined: Отклонённые
+    admin:
       state:
         states:
           confirmed: Подтверждённые
