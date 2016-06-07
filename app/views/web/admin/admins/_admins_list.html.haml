@@ -1,0 +1,28 @@
+= paginate admins, theme: 'twitter-bootstrap-3'
+- model_class = Admin
+%table.table.table-condensed.table-hover
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:first_name)
+      %th= model_class.human_attribute_name(:last_name)
+      %th= model_class.human_attribute_name(:activity_line)
+      %th= model_class.human_attribute_name(:email)
+      %th= t 'helpers.links.actions'
+  %tbody
+    - admins.each do |admin|
+      %tr.link{ data: { href: edit_admin_admin_path(admin) }, class: after_end_filling(admin.created_at) }
+        %td= admin.id
+        %td= admin.first_name
+        %td= admin.last_name
+        %td= admin.activity_line
+        %td= admin.email
+        %td.actions
+          - unless admin.confirmed?
+            = link_to admin_admin_path(admin, admin: { state: :confirmed }), method: :patch, class: 'btn btn-success btn-xs' do
+              %i.fa.fa-check
+          = link_to edit_admin_admin_path(admin), class: 'btn btn-warning btn-xs' do
+            %i.fa.fa-pencil
+          = link_to admin_admin_path(admin, admin: { state: :declined }), method: :patch, class: 'btn btn-xs btn-danger' do
+            %i.fa.fa-close
+= paginate admins, theme: 'twitter-bootstrap-3'

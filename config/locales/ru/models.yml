@@ -2,6 +2,7 @@ ru:
   activerecord:
     models:
       user: Участник
+      admin: Администратор
     attributes:
       user:
         last_name: Фамилия
@@ -31,6 +32,12 @@ ru:
               email: имеет неверный формат
   state_machines:
     user:
+      state:
+        states:
+          confirmed: Подтверждённые
+          unviewed: Непросмотренные
+          declined: Отклонённые
+    admin:
       state:
         states:
           confirmed: Подтверждённые
