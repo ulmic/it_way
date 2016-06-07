@@ -1,6 +1,4 @@
 ru:
-  helpers:
-    enter: Войти
   web:
     welcome:
       activity_lines:

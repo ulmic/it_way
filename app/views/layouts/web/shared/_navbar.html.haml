@@ -13,12 +13,13 @@
         %ul.nav.navbar-nav.navbar-right
           %li.hidden
             %a{ href: '#page-top' }
-          %li.dropdown
-            %a{ href: admin_users_path }
-              Users
-          %li.dropdown
-            %a{ href: admin_pages_path }
-              Pages
-          %li.dropdown
-            %a{ href: admin_events_path }
-              Events
+          - unless current_user.role.datamanager?
+            %li.dropdown
+              %a{ href: admin_users_path }
+                Users
+            %li.dropdown
+              %a{ href: admin_pages_path }
+                Pages
+            %li.dropdown
+              %a{ href: admin_events_path }
+                Events

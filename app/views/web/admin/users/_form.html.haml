@@ -4,21 +4,18 @@
 .row
   .col-lg-12
     = simple_form_for [:admin, @user_form], input_html: { class: 'form-horizontal' } do |f|
+      = f.input :last_name, as: :string
       = f.input :first_name, as: :string
       = f.input :patronymic, as: :string
-      = f.input :last_name, as: :string
-      = f.input :activity_line, as: :string
-      = f.input :answer, as: :string
+      = f.input :birth_date, as: :string
+      = f.input :email, as: :string, required: true
+      = f.input :phone, as: :string
+      = f.input :activity_line
+      = f.input :experience, as: :string
       = f.input :reason, as: :string
       = f.input :has_i_note, as: :string
-      = f.input :birth_date, as: :string
-      = f.input :phone, as: :string
-      = f.input :region, as: :string
       = f.input :locality, as: :string
-      = f.input :experience, as: :string
-      = f.input :email, as: :string, required: true
-      = f.input :role
-      = f.input :state, as: :state_event
-      = f.hint t('hints.admin.user.role')
+      = f.input :school
+      = f.input :group
       = f.button :submit, t('helpers.links.save'), class: 'btn-success'
       = link_to t('helpers.links.back'), admin_users_path, class: 'btn btn-default'
