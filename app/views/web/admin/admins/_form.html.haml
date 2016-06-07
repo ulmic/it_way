@@ -8,5 +8,6 @@
       = f.input :first_name, as: :string
       = f.input :email, as: :string, required: true
       = f.input :password, as: :string
+      = f.input :role
       = f.button :submit, t('helpers.links.save'), class: 'btn-success'
       = link_to t('helpers.links.back'), admin_admins_path, class: 'btn btn-default'
