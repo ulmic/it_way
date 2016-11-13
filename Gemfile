@@ -53,6 +53,7 @@ gem 'sprockets'
 gem 'bootstrap-kaminari-views'
 gem 'to_xls-rails'
 gem 'more_html_tags'
+gem 'youtube_addy'
 
 group :development, :test do
   gem 'byebug'
