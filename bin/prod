@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+
+def usage(mode = :default)
+  if mode == :with_title
+    puts "Production enviroment orchestrate (by Uchi.ru)\n\n"
+  end
+  puts "Usage:"
+  puts "  ./bin/prod cd                     - go to app folder"
+  puts "  ./bin/prod rails <cmd>            - run `rails cmd` on prod (`rails c` for example)"
+  puts "  ./bin/prod get_db                 - dump, download and restore production db"
+  exit
+end
+
+if ARGV.empty?
+  usage(:with_title)
+end
+
+if ARGV[0] == "cd"
+  system "heroku run bash -a it-way"
+
+elsif ARGV[0] == "logs"
+  system "heroku logs -a it-way"
+
+elsif ARGV[0] == "rails" && !ARGV[1].nil?
+  ARGV.shift
+  system "heroku run rails #{ARGV.join(" ")} -a it-way"
+
+elsif ARGV[0] == "get_db"
+  at = Time.now.strftime("%Y-%m-%d--%H-%M")
+  dump = "it-way--#{at}.dump"
+  system("heroku pg:backups capture -a it-way")
+  system("curl -o /tmp/#{dump} \"#{`heroku pg:backups public-url -a it-way`.strip}\"")
+  system "dropdb it_way_development --if-exists && createdb it_way_development && pg_restore -d it_way_development --no-acl --no-owner /tmp/#{dump}"
+
+else
+  puts "ERROR: I dont known such command\n\n"
+  usage
+end
+

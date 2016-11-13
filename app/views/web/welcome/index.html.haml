@@ -12,17 +12,11 @@
             II форум перспектив будущего ИТ-специалиста
           %br
   .text-vertical-center.dates{ style: 'width: 100%' }
-    %h2
-      31 августа - 4 сентября 2016 года
-    %h2
-      ДООЦ "Юность"
-      %br
-    %hr
-    %a.btn.btn-dark.btn-lg.scroll{ href: "#request", data: { id: :form } }
-      Подать заявку
+    .row
+      .col-md-8.col-md-offset-2
+        .youtube_video{ style: 'margin-bottom: 15px' }
+          != YouTubeAddy.youtube_embed_url('https://www.youtube.com/watch?v=jb8oS39Zlps')
 = render 'activity_lines'
-= render 'form'
-= render 'price'
 = render 'programming'
 = render 'design'
 = render 'steel'
