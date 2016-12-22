@@ -4,6 +4,7 @@
 #= require turbolinks
 #= require select2
 #= require tabs
+#= require jquery.webui-popover.min
 
 $ ->
   $('.select2').select2()

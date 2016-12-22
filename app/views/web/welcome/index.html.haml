@@ -1,21 +1,34 @@
 = javascript_include_tag 'web/welcome'
 = stylesheet_link_tag 'web/welcome'
 = render 'google_analytics'
-%header#top.header{ style: "background-image: url('assets/headers/2.jpg')"}
+%header#top.header{ style: "background-image: url('assets/headers/9.jpg')"}
   .text-vertical-left
     .row{style: "margin-right: 0px"}
       .col-md-3
-        = image_tag 'logo.png', class: :logo
+        %img{ src: 'https://ulmic.ru/assets/apps/logo-mic-square.png', class: :logo }
       .col-md-9
         .text-vertical-right.title
           %h1
-            II форум перспектив будущего ИТ-специалиста
+            III форум перспектив будущего ИТ-специалиста
+          %h3{ style: 'font-family: mic-bold; color: black' }
+            21 - 26 октября 2017 года
+          %h3{ style: 'font-family: mic-bold; color: black' }
+            Ульяновская область, Димитровград, ДООЦ «Юность»
           %br
-  .text-vertical-center.dates{ style: 'width: 100%' }
     .row
-      .col-md-8.col-md-offset-2
-        .youtube_video{ style: 'margin-bottom: 15px' }
-          != YouTubeAddy.youtube_embed_url('https://www.youtube.com/watch?v=jb8oS39Zlps')
+      .col-md-8.col-md-offset-2.text-vertical-center
+        %br
+        %h3{ style: 'font-family: mic-bold; color: black' }
+          Приём заявок будет проходить на этом сайте
+        %h3{ style: 'font-family: mic-bold; color: black' }
+          Подпишитесь на нас, чтобы не пропустить новости III форума перспектив будущего ИТ-специалиста «IT Way'17»
+      .col-md-4.col-md-offset-4{ style: 'text-align: center' }
+        %h1.icons
+          %span.link{ data: { href: configus.social_links.vk } }
+            = fa_icon 'vk 2x'
+          %span.link{ data: { href: configus.social_links.twitter } }
+            = fa_icon 'twitter 2x'
+= render 'it_way_2016'
 = render 'activity_lines'
 = render 'programming'
 = render 'design'
