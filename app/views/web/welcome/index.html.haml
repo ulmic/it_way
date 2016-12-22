@@ -5,17 +5,13 @@
   .text-vertical-left
     .row{style: "margin-right: 0px"}
       .col-md-3
-        %img{ src: 'ulmic.ru/assets/apps/logo-mic-square.png', class: :logo }
+        %img{ src: 'https://ulmic.ru/assets/apps/logo-mic-square.png', class: :logo }
       .col-md-9
         .text-vertical-right.title
           %h1
-            II форум перспектив будущего ИТ-специалиста
+            III форум перспектив будущего ИТ-специалиста
           %br
-  .text-vertical-center.dates{ style: 'width: 100%' }
-    .row
-      .col-md-8.col-md-offset-2
-        .youtube_video{ style: 'margin-bottom: 15px' }
-          != YouTubeAddy.youtube_embed_url('https://www.youtube.com/watch?v=jb8oS39Zlps')
+= render 'it_way_2016'
 = render 'activity_lines'
 = render 'programming'
 = render 'design'
