@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: it_way_development
+test:
+  <<: *default
+  database: it_way_test
+production:
+  <<: *default
+  username: develop
+  database: it_way_production
