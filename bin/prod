@@ -1,9 +1,6 @@
 #!/usr/bin/env ruby
 
 def usage(mode = :default)
-  if mode == :with_title
-    puts "Production enviroment orchestrate (by Uchi.ru)\n\n"
-  end
   puts "Usage:"
   puts "  ./bin/prod cd                     - go to app folder"
   puts "  ./bin/prod rails <cmd>            - run `rails cmd` on prod (`rails c` for example)"
